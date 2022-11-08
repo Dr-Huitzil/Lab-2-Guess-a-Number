@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lab 2: Guess the Number </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<style>
+  body {
+    background-image: url('img/735997.jpg');
+  }
+
+  #messages {
+    color: red;
+  }
+
+  #congrats {
+    color: green;
+  }
+
+  #alert {
+    color: red;
+  }
+
+  #guess {
+    width: 440px;
+    margin: 0 auto;
+  }
+
+  .card {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10px
+  }
+
+  .woah {
+    background-color: white;
+    padding: 10px 120px 10px 20px;
+    margin-left: 12.5%;
+    margin-right: 150%;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
+
+  #go:hover {
+    background-color: green;
+  }
+
+  #torture:hover {
+    background-color: yellow;
+  }
+</style>
+
+<body>
+  <header class="bg-success text-white m-4 p-4 text-center rounded-3">
+    <h1>Guess the Number</h1>
+  </header>
+
+  <br>
+
+  <div class="card text-center">
+    <div class="card-body">
+      <h4> Guess a number between 1 and 99 in seven attempts! </h4>
+      <div class="input-group">
+        <input id="numero" type="number" class="form-control" placeholder="Enter a Number (1-99)" min="1" max="99">
+        <span class="input-group-btn">
+          <button id="go" class="btn btn-default" type="button">Go!</button>
+          <button id="torture" class="btn btn-default" type="button" onClick="window.location.reload()"> Try Again
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="card text-center">
+    <div class="card-body">
+      <h3>
+        <div id="alert"> </div>
+      </h3>
+      <div id="messages"> </div>
+      <div id="congrats"> </div>
+      <div id="previous"> </div>
+    </div>
+  </div>
+
+
+  <div id="guess" role="alert"> </div>
+
+
+  <section class="woah">
+    <div class="dubs">
+      <h5>
+        <div id="rounds">
+      </h5>
+      <div id="win"></div>
+      <div id="loss"></div>
+
+    </div>
+  </section>
+</body>
+
+<script src="js/script.js">
+
+</script>
+
+</html>
